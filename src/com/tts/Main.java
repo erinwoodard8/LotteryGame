@@ -12,7 +12,6 @@ public class Main {
 
 
         do {
-
             System.out.print("Enter the name of your favorite pet. ");
             String petName = input.next();
 
@@ -37,45 +36,34 @@ public class Main {
 
 
             int magicBall = luckyNum * randomNum;
-                if(magicBall > 75){
-                    do{
-                        magicBall = magicBall / 2;
-                    } while(magicBall > 75);
+                if(magicBall > 75) {
+                    magicBall = (magicBall % 75) + 1;
                 }
 
-            int lottoNum1 = petName.charAt(2);
 
-                if(lottoNum1 > 65){
-                    do{
-                        lottoNum1 = lottoNum1 / 2;
-                    } while(lottoNum1 > 65);
+            int lottoNum1 = petName.charAt(2);
+                if(lottoNum1 > 65) {
+                    lottoNum1 = (lottoNum1 % 65) + 1;
                 }
 
 
             int lottoNum2 = carModel + luckyNum;
-                if(lottoNum2 > 65){
-                    do{
-                        lottoNum2 = lottoNum2 / 2;
-                    } while(lottoNum2 > 65);
+                if(lottoNum2 > 65) {
+                    lottoNum2 = (lottoNum2 % 65) + 1;
                 }
 
             int lottNum3 = 42;
 
 
             int lottoNum4 = faveAct.charAt(0);
-            if(lottoNum4 > 65){
-                do{
-                    lottoNum4 = lottoNum4 / 2;
-                } while(lottoNum4 > 65);
-            }
+                if(lottoNum4 > 65) {
+                    lottoNum4 = (lottoNum4 % 65) + 1;
+                }
 
 
             int lottoNum5 = faveAct.charAt(faveAct.length() - 1);
-
-                if(lottoNum5 > 65){
-                    do{
-                        lottoNum5 = lottoNum5 / 2;
-                    } while(lottoNum5 > 65);
+                if(lottoNum5 > 65) {
+                    lottoNum5 = (lottoNum5 % 65) + 1;
                 }
 
 
@@ -86,7 +74,7 @@ public class Main {
             userInput = input.next();
 
         } while(!userInput.equals("n"));
-        
+
 
 
 
